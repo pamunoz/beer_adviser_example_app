@@ -16,11 +16,13 @@ public class FindBeerActivity extends Activity {
 
     // Call when the user clicks the button
     public void onClickFindBeer(View view) {
-        Spinner color = (Spinner) findViewById(R.id.color);
-        String beer = String.valueOf(color.getSelectedItem());
+        // get the reference to the TextView
         TextView brands = (TextView) findViewById(R.id.brands);
-        brands.setText(beer);
-
-
+        // get the reference to the Spinner
+        Spinner color = (Spinner) findViewById(R.id.color);
+        // Get the selected item in the Spinner
+        String beerType = String.valueOf(color.getSelectedItem());
+        // Display the selected item
+        brands.setText(beerType);
     }
 }
